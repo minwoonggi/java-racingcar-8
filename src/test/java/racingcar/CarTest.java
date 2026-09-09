@@ -1,6 +1,5 @@
 package racingcar;
 
-import jdk.jfr.Description;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import racingcar.domain.Car;
@@ -28,6 +27,16 @@ public class CarTest {
 
             assertThat(car.getName()).isEqualTo("Name");
         }
+    }
+
+    @Test
+    void 자동차_전진(){
+        Car car = new Car("자동차");
+        int carPosition = car.getPosition();
+
+        car.move();
+
+        assertThat(car.getPosition()).isEqualTo(carPosition+1);
     }
 
 }
