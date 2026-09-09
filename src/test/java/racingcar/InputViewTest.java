@@ -38,16 +38,18 @@ public class InputViewTest {
         void 비어있는_입력값(){
             List<String> names = List.of("pobi","woni"," ");
 
-            assertThatThrownBy(() -> InputView.validateEmptyName(names))
-                   .isInstanceOf(IllegalArgumentException.class);
+            assertThatThrownBy(() -> InputView.isValidInput(names))
+                   .isInstanceOf(IllegalArgumentException.class)
+                    .hasMessage("비어있는 입력값이 존재합니다.");
         }
 
         @Test
         void 중복된_입력값(){
             List<String> names = List.of("pobi","woni","pobi");
 
-            assertThatThrownBy(() -> InputView.validateDuplicateName(names))
-                    .isInstanceOf(IllegalArgumentException.class);
+            assertThatThrownBy(() -> InputView.isValidInput(names))
+                    .isInstanceOf(IllegalArgumentException.class)
+                    .hasMessage("중복된 입력값이 존재합니다.");
         }
     }
 }
