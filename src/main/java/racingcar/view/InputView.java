@@ -1,8 +1,13 @@
 package racingcar.view;
 
+import camp.nextstep.edu.missionutils.Console;
 import java.util.List;
 
 public class InputView {
+
+    public String input(){
+        return Console.readLine();
+    }
 
     public static List<String> parseCarNames(String input){
         return List.of(input.split(",",-1));

@@ -16,11 +16,11 @@ public class CarsTest {
 
     @BeforeEach
     void setUp(){
-        cars = new Cars(List.of(
-                new Car("자동차1"),
-                new Car("자동차2"),
-                new Car("자동차3")
-        ));
+        cars = Cars.fromInputNames(List.of(
+                "자동차1",
+                "자동차2",
+                "자동차3")
+        );
     }
 
     @Test

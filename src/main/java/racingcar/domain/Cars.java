@@ -3,18 +3,23 @@ package racingcar.domain;
 import java.util.List;
 
 public class Cars {
-    private static final int MOVE_STANDARD_VAlUE=4;
+    private static final int MOVE_STANDARD_VALUE=4;
 
-    List<Car> cars;
-
-    public Cars(List<Car> cars) {
+    private List<Car> cars;
+    private Cars(List<Car> cars) {
         this.cars = cars;
     }
 
+    public static Cars fromInputNames(List<String> names){
+        List<Car> newCars = names.stream()
+                .map(Car::new)
+                .toList();
+        return new Cars(newCars);
+    }
 
     public void moveAll(List<Integer> integerList) {
         for(int i = 0; i < cars.size(); i++) {
-            if (integerList.get(i)>=MOVE_STANDARD_VAlUE){
+            if (integerList.get(i)>=MOVE_STANDARD_VALUE){
                 cars.get(i).move();
             }
         }
