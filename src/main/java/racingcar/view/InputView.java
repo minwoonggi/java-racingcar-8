@@ -15,8 +15,8 @@ public class InputView {
 
     public static void isValidAttemptCount(String input){
         try{
-            validateIntegerAttemptCount(input);
-            validatePositiveAttemptCount(input);
+            Integer num = validateIntegerAttemptCount(input);
+            validatePositiveAttemptCount(num);
         }catch (NumberFormatException e){
             throw new IllegalArgumentException("정수값을 입력받아야 합니다.");
         }
@@ -35,12 +35,11 @@ public class InputView {
         if (uniqueCount != names.size())
             throw new IllegalArgumentException("중복된 입력값이 존재합니다.");
     }
-    private static void validateIntegerAttemptCount(String input){
-       Integer.parseInt(input);
+    private static Integer validateIntegerAttemptCount(String input){
+        return Integer.parseInt(input);
     }
 
-    private static void validatePositiveAttemptCount(String input){
-        int num = Integer.parseInt(input);
+    private static void validatePositiveAttemptCount(Integer num){
         if (num<0)
             throw new IllegalArgumentException("0보다 큰값을 입력받아야 합니다.");
     }
