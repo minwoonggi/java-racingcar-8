@@ -12,7 +12,7 @@ public class CarTest {
     @Nested
     class 자동차_이름_테스트 {
         @Test
-        void 자동차_이름_5자_이상_실패() {
+        void 자동차_이름_5자_초과_실패() {
             String name = "TestName";
 
             assertThatThrownBy(() -> new Car(name))
