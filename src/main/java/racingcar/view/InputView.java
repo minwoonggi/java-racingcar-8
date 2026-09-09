@@ -24,10 +24,11 @@ public class InputView {
         validateDuplicateCarName(names);
     }
 
-    public static void isValidAttemptCount(String input){
+    public static Integer isValidAttemptCount(String input){
         try{
             Integer num = validateIntegerAttemptCount(input);
             validatePositiveAttemptCount(num);
+            return num;
         }catch (NumberFormatException e){
             throw new IllegalArgumentException("정수값을 입력받아야 합니다.");
         }
