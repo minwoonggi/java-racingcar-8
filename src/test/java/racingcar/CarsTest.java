@@ -17,10 +17,7 @@ public class CarsTest {
     @BeforeEach
     void setUp(){
         cars = Cars.fromInputNames(List.of(
-                "자동차1",
-                "자동차2",
-                "자동차3")
-        );
+                "자동차1", "자동차2", "자동차3"));
     }
 
     @Test
