@@ -3,6 +3,7 @@ package racingcar.controller;
 import racingcar.domain.Cars;
 import racingcar.service.CarRaceService;
 import racingcar.view.InputView;
+import racingcar.view.InputViewValidator;
 import racingcar.view.OutputView;
 
 import java.util.List;
@@ -18,12 +19,13 @@ public class CarRaceController {
     public void run() {
         String inputCarNames =InputView.inputCarNames();
         List<String> carNamesList = InputView.parseCarNames(inputCarNames);
-        InputView.isValidCarNameInput(carNamesList);
+        InputViewValidator.isValidCarNameInput(carNamesList);
 
         Cars cars = Cars.fromInputNames(carNamesList);
 
         String inputAttempt = InputView.inputAttemptCount();
-        int attempt = InputView.isValidAttemptCount(inputAttempt);
+        InputViewValidator.isValidAttemptCount(inputAttempt);
+        int attempt = Integer.parseInt(inputAttempt);
 
         for (int i =0 ;i<attempt; i++){
             carRaceService.oneCycleCarRace(cars);
