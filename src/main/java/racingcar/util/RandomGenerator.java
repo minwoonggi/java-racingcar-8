@@ -12,11 +12,7 @@ public final class RandomGenerator {
     private RandomGenerator() {
     }
 
-    public static List<Integer> createRandomNums(int carCounts) {
-        List<Integer> randomNums = new ArrayList<>();
-        for (int i = 0; i < carCounts; i++){
-            randomNums.add(Randoms.pickNumberInRange(START_RANGE, END_RANGE));
-        }
-        return randomNums;
+    public static Integer createRandomNum() {
+          return  Randoms.pickNumberInRange(START_RANGE, END_RANGE);
     }
 }
