@@ -1,9 +1,7 @@
-package racingcar;
+package racingcar.view;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import racingcar.view.InputView;
-import racingcar.view.InputViewValidator;
 
 import java.util.List;
 

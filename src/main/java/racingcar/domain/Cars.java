@@ -3,7 +3,7 @@ package racingcar.domain;
 import java.util.List;
 
 public class Cars {
-    private static final int MOVE_STANDARD_VALUE=4;
+    private static final int MOVE_STANDARD_VALUE = 4;
 
     private List<Car> cars;
     private Cars(List<Car> cars) {
@@ -19,7 +19,7 @@ public class Cars {
 
     public void moveAll(List<Integer> integerList) {
         for(int i = 0; i < cars.size(); i++) {
-            if (integerList.get(i)>=MOVE_STANDARD_VALUE){
+            if (integerList.get(i) >= MOVE_STANDARD_VALUE){
                 cars.get(i).move();
             }
         }
@@ -33,7 +33,7 @@ public class Cars {
         int maxPosition = getMaxPosition();
 
         return cars.stream()
-                .filter(car -> car.getPosition()==maxPosition)
+                .filter(car -> car.getPosition( )== maxPosition)
                 .toList();
     }
 

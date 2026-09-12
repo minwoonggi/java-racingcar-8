@@ -3,7 +3,6 @@ package racingcar.view;
 import java.util.List;
 
 public class InputViewValidator {
-
     public static void isValidCarNameInput(List<String> names){
         validateEmptyCarName(names);
         validateDuplicateCarName(names);
@@ -36,7 +35,7 @@ public class InputViewValidator {
     }
 
     private static void validatePositiveAttemptCount(Integer num){
-        if (num<0)
+        if (num < 0)
             throw new IllegalArgumentException("0보다 큰값을 입력받아야 합니다.");
     }
 }

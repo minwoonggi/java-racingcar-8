@@ -1,17 +1,14 @@
-package racingcar;
+package racingcar.domain;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import racingcar.domain.Car;
-import racingcar.domain.Cars;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CarsTest {
-
     private Cars cars;
 
     @BeforeEach
@@ -53,7 +50,7 @@ public class CarsTest {
             assertThat(cars.getWinner().stream()
                     .map(Car::getName)
                     .toList()
-            ).containsExactly("자동차1","자동차3");
+            ).containsExactly("자동차1", "자동차3");
         }
     }
 }

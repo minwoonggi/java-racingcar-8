@@ -1,19 +1,17 @@
-package racingcar;
+package racingcar.domain;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import racingcar.domain.Car;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CarTest {
-
     @Nested
     class 자동차_이름_테스트 {
         @Test
         void 자동차_이름_5자_초과_실패() {
-            String name = "TestName";
+            String name = "nameee";
 
             assertThatThrownBy(() -> new Car(name))
                     .isInstanceOf(IllegalArgumentException.class)
@@ -22,11 +20,11 @@ public class CarTest {
 
         @Test
         void 자동차_이름_5자_이하_성공() {
-            String name = "Name";
+            String name = "namee";
 
             Car car = new Car(name);
 
-            assertThat(car.getName()).isEqualTo("Name");
+            assertThat(car.getName()).isEqualTo("namee");
         }
     }
 
@@ -37,7 +35,6 @@ public class CarTest {
 
         car.move();
 
-        assertThat(car.getPosition()).isEqualTo(carPosition+1);
+        assertThat(car.getPosition()).isEqualTo(carPosition + 1);
     }
-
 }

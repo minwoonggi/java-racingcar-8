@@ -1,15 +1,13 @@
-package racingcar;
+package racingcar.view;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import racingcar.view.InputView;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class InputViewTest {
-
     @Nested
     class 입력값_분리 {
         @Test

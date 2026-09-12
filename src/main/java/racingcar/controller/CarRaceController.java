@@ -15,7 +15,6 @@ public class CarRaceController {
         this.carRaceService = carRaceService;
     }
 
-
     public void run() {
         String inputCarNames =InputView.inputCarNames();
         List<String> carNamesList = InputView.parseCarNames(inputCarNames);

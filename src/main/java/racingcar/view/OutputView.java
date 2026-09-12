@@ -6,6 +6,8 @@ import racingcar.domain.Cars;
 import java.util.List;
 
 public class OutputView {
+    static final String WINNERS_DELIMITER = ",";
+
     public static void printRaceResult(Cars cars){
         for(Car car : cars.getCars()){
             System.out.println(
@@ -20,7 +22,7 @@ public class OutputView {
                 .toList();
 
         System.out.println(
-                "최종 우승자 : "+String.join(",",winnerList)
+                "최종 우승자 : " + String.join(WINNERS_DELIMITER, winnerList)
         );
     }
 }
