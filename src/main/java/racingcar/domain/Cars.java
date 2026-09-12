@@ -1,5 +1,6 @@
 package racingcar.domain;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Cars {
@@ -26,14 +27,19 @@ public class Cars {
     }
 
     public List<Car> getCars() {
-        return cars;
+        return Collections.unmodifiableList(cars);
     }
 
-    public List<Car> getWinner() {
+    public int getCarsCount() {
+        return cars.size();
+    }
+
+    public List<String> getWinners() {
         int maxPosition = getMaxPosition();
 
         return cars.stream()
-                .filter(car -> car.getPosition( )== maxPosition)
+                .filter(car -> car.getPosition() == maxPosition)
+                .map(Car::getName)
                 .toList();
     }
 

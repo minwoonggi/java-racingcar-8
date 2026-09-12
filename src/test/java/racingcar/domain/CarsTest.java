@@ -36,8 +36,7 @@ public class CarsTest {
             List<Integer> integerList = List.of(2, 3, 9);
             cars.moveAll(integerList);
 
-            assertThat(cars.getWinner().stream()
-                    .map(Car::getName)
+            assertThat(cars.getWinners().stream()
                     .toList()
             ).containsExactly("자동차3");
         }
@@ -47,8 +46,7 @@ public class CarsTest {
             List<Integer> integerList = List.of(4, 2, 5);
             cars.moveAll(integerList);
 
-            assertThat(cars.getWinner().stream()
-                    .map(Car::getName)
+            assertThat(cars.getWinners().stream()
                     .toList()
             ).containsExactly("자동차1", "자동차3");
         }

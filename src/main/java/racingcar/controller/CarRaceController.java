@@ -1,5 +1,7 @@
 package racingcar.controller;
 
+import racingcar.controller.dto.CarResult;
+import racingcar.controller.mapper.CarResultMapper;
 import racingcar.domain.Cars;
 import racingcar.service.CarRaceService;
 import racingcar.view.InputView;
@@ -29,9 +31,11 @@ public class CarRaceController {
         for (int i =0 ;i<attempt; i++){
             carRaceService.oneCycleCarRace(cars);
 
-            OutputView.printRaceResult(cars);
+            List<CarResult> carResults = CarResultMapper.toCarResults(cars);
+            OutputView.printRaceResult(carResults);
         }
 
-        OutputView.printWinners(cars);
+        List<String> winnerList = cars.getWinners();
+        OutputView.printWinners(winnerList);
     }
 }

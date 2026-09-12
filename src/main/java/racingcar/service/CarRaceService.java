@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CarRaceService {
     public void oneCycleCarRace(Cars cars){
-        int carCounts = cars.getCars().size();
+        int carCounts = cars.getCarsCount();
 
         List<Integer> randomNums = RandomGenerator.createRandomNums(carCounts);
 

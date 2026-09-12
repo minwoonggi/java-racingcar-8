@@ -29,7 +29,7 @@ public class CarTest {
     }
 
     @Test
-    void 자동차_전진(){
+    void 자동차는_랜덤_값이_4_이상이면_전진(){
         Car car = new Car("자동차");
         int carPosition = car.getPosition();
 
