@@ -11,9 +11,9 @@ public class OutputView {
     static final String CAR_DISTANCE_DISPLAY = "-";
 
     public static void printRaceResult(List<CarResult> carResults) {
-        for(CarResult carResult : carResults) {
+        for (CarResult carResult : carResults) {
             System.out.println(
-                    carResult.name()+ " : " + CAR_DISTANCE_DISPLAY.repeat(carResult.position())
+                    carResult.name() + " : " + CAR_DISTANCE_DISPLAY.repeat(carResult.position())
             );
         }
     }

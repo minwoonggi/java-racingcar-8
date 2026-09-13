@@ -5,18 +5,19 @@ import java.util.List;
 
 public class InputView {
     private static final String INPUT_DELIMITER = ",";
+    private static final int KEEP_CHECKING_LAST_EMPTY = -1;
 
-    public static String inputCarNames(){
+    public static String inputCarNames() {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
         return Console.readLine();
     }
 
-    public static String inputAttemptCount(){
+    public static String inputAttemptCount() {
         System.out.println("시도할 횟수는 몇 회인가요?");
         return Console.readLine();
     }
 
-    public static List<String> parseCarNames(String input){
-        return List.of(input.split(INPUT_DELIMITER, -1));
+    public static List<String> parseCarNames(String input) {
+        return List.of(input.split(INPUT_DELIMITER, KEEP_CHECKING_LAST_EMPTY));
     }
 }

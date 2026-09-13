@@ -13,22 +13,22 @@ import java.util.List;
 public class CarRaceController {
     private final CarRaceService carRaceService;
 
-    public CarRaceController(CarRaceService carRaceService){
+    public CarRaceController(CarRaceService carRaceService) {
         this.carRaceService = carRaceService;
     }
 
     public void run() {
         String inputCarNames = InputView.inputCarNames();
         List<String> carNamesList = InputView.parseCarNames(inputCarNames);
-        InputViewValidator.isValidCarNameInput(carNamesList);
+        InputViewValidator.validateCarNameInput(carNamesList);
 
         Cars cars = Cars.fromInputNames(carNamesList);
 
         String inputAttempt = InputView.inputAttemptCount();
-        InputViewValidator.isValidAttemptCount(inputAttempt);
+        InputViewValidator.validateAttemptCount(inputAttempt);
         int attempt = Integer.parseInt(inputAttempt);
 
-        for (int i =0 ;i<attempt; i++){
+        for (int i = 0;i < attempt; i++){
             carRaceService.oneCycleCarRace(cars);
 
             List<CarResult> carResults = CarResultMapper.toCarResults(cars);

@@ -17,7 +17,7 @@ public class CarRaceService {
     }
 
     private static void createRandomNums(int carCounts, List<Integer> randomNums) {
-        for (int i = 0; i < carCounts; i++){
+        for (int i = 0; i < carCounts; i++) {
             randomNums.add(RandomGenerator.createRandomNum());
         }
     }

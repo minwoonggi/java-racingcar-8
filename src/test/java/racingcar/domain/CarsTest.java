@@ -9,6 +9,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("자동차들의 이동 및 입력 검증 테스트")
 public class CarsTest {
     private Cars cars;
 
@@ -20,14 +21,14 @@ public class CarsTest {
 
     @Test
     void 자동차는_랜덤값_4_이상이면_전진() {
-        List<Integer> integerList = List.of(4,3,9);
+        List<Integer> integerList = List.of(4, 3, 9);
 
         cars.moveAll(integerList);
 
         assertThat(cars.getCars().stream()
                 .map(Car::getPosition)
                 .toList()
-        ).containsExactly(1,0,1);
+        ).containsExactly(1, 0, 1);
     }
 
     @Nested

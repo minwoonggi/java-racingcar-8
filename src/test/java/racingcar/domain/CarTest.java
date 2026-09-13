@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("자동차 이름 검증 및 이동 테스트")
 public class CarTest {
     @Nested
     class 자동차_이름_테스트 {
@@ -30,7 +31,7 @@ public class CarTest {
     }
 
     @Test
-    void 자동차는_랜덤_값이_4_이상이면_전진() {
+    void 자동차는_전진() {
         Car car = new Car("자동차");
         int carPosition = car.getPosition();
 

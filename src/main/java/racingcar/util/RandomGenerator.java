@@ -13,6 +13,6 @@ public final class RandomGenerator {
     }
 
     public static Integer createRandomNum() {
-          return  Randoms.pickNumberInRange(START_RANGE, END_RANGE);
+          return Randoms.pickNumberInRange(START_RANGE, END_RANGE);
     }
 }

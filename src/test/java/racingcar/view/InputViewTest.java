@@ -8,6 +8,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("자동차 입력 및 분리 테스트")
 public class InputViewTest {
     @Nested
     class 입력값_분리 {
