@@ -11,7 +11,7 @@ public class InputViewValidatorTest {
     @Nested
     class 자동차_이름_입력값_검증{
         @Test
-        void 비어있는_자동차_이름_입력값(){
+        void 비어있는_자동차_이름_입력값() {
             List<String> names = List.of("pobi","woni"," ");
 
             assertThatThrownBy(() -> InputViewValidator.isValidCarNameInput(names))
@@ -20,7 +20,7 @@ public class InputViewValidatorTest {
         }
 
         @Test
-        void 중복된_자동차_이름_입력값(){
+        void 중복된_자동차_이름_입력값() {
             List<String> names = List.of("pobi","woni","pobi");
 
             assertThatThrownBy(() -> InputViewValidator.isValidCarNameInput(names))

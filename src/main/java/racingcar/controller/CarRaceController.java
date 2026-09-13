@@ -18,7 +18,7 @@ public class CarRaceController {
     }
 
     public void run() {
-        String inputCarNames =InputView.inputCarNames();
+        String inputCarNames = InputView.inputCarNames();
         List<String> carNamesList = InputView.parseCarNames(inputCarNames);
         InputViewValidator.isValidCarNameInput(carNamesList);
 

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRaceService {
-    public void oneCycleCarRace(Cars cars){
+    public void oneCycleCarRace(Cars cars) {
         int carCounts = cars.getCarsCount();
         List<Integer> randomNums = new ArrayList<>();
 

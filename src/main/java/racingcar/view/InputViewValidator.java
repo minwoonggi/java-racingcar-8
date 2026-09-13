@@ -8,7 +8,7 @@ public class InputViewValidator {
         validateDuplicateCarName(names);
     }
 
-    public static void isValidAttemptCount(String input){
+    public static void isValidAttemptCount(String input) {
         try{
             Integer num = validateIntegerAttemptCount(input);
             validatePositiveAttemptCount(num);
@@ -17,12 +17,12 @@ public class InputViewValidator {
         }
     }
 
-    private static void validateEmptyCarName(List<String> names){
+    private static void validateEmptyCarName(List<String> names) {
         if (names.stream().anyMatch(String::isBlank))
             throw new IllegalArgumentException("비어있는 입력값이 존재합니다.");
     }
 
-    private static void validateDuplicateCarName(List<String> names){
+    private static void validateDuplicateCarName(List<String> names) {
         long uniqueCount = names.stream()
                 .distinct()
                 .count();

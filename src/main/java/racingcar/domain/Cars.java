@@ -11,7 +11,7 @@ public class Cars {
         this.cars = cars;
     }
 
-    public static Cars fromInputNames(List<String> names){
+    public static Cars fromInputNames(List<String> names) {
         List<Car> newCars = names.stream()
                 .map(Car::new)
                 .toList();
@@ -20,7 +20,7 @@ public class Cars {
 
     public void moveAll(List<Integer> integerList) {
         for(int i = 0; i < cars.size(); i++) {
-            if (integerList.get(i) >= MOVE_STANDARD_VALUE){
+            if (integerList.get(i) >= MOVE_STANDARD_VALUE) {
                 cars.get(i).move();
             }
         }
@@ -43,7 +43,7 @@ public class Cars {
                 .toList();
     }
 
-    private int getMaxPosition(){
+    private int getMaxPosition() {
        return cars.stream()
                .mapToInt(Car::getPosition)
                .max()
